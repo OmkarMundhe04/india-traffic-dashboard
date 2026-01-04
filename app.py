@@ -45,7 +45,6 @@ st.markdown("""
     transition: .3s ease;
     border: 1px solid rgba(0,0,0,.1);
 }
-
 .card:hover { transform: translateY(-2px); }
 
 .map-container {
@@ -64,7 +63,7 @@ st.markdown("""
     -webkit-text-fill-color: transparent;
 }
 
-/* Buttons (base) */
+/* Buttons */
 .stButton > button {
     width: 100%;
     border-radius: 12px;
@@ -75,6 +74,39 @@ st.markdown("""
     box-shadow: 0 4px 14px rgba(0,0,0,.25);
 }
 .stButton > button:hover { transform: translateY(-2px); }
+
+/* ===========================================
+   PAGE TITLE — safe & always visible
+===========================================*/
+.page-title {
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+
+    background: linear-gradient(135deg,#5b6fe6,#764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* fallback color in case gradient fails */
+    color: #5b6fe6;
+}
+
+/* ---------- INFO BOX (base) ---------- */
+.info-box {
+    padding: 14px 18px;
+    border-radius: 14px;
+    margin-top: 6px;
+    margin-bottom: 18px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+
+    background:#f4f6ff;
+    border-left:4px solid #667eea;
+}
+.info-box strong {
+    font-size: 1.05rem;
+}
 
 
 /*****************************************
@@ -91,13 +123,6 @@ st.markdown("""
         border: 1px solid #e2e8f0;
     }
 
-    h1 {
-        background: linear-gradient(135deg,#5b6fe6,#764ba2);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 900;
-    }
-
     h2,h3 { color:#2d3748; }
 
     .card {
@@ -105,13 +130,11 @@ st.markdown("""
         box-shadow:0 4px 18px rgba(0,0,0,.12);
     }
 
-    /* ---------- SIDEBAR ---------- */
-
+    /* Sidebar */
     [data-testid="stSidebar"] {
         background: linear-gradient(180deg,#667eea,#764ba2);
     }
 
-    /* Sidebar text & section labels */
     [data-testid="stSidebar"] h1,
     [data-testid="stSidebar"] h2,
     [data-testid="stSidebar"] h3,
@@ -120,68 +143,47 @@ st.markdown("""
         color:#ffffff !important;
     }
 
-    /* ---------- SELECTBOX (Light mode readable) ---------- */
-
-    /* Selected value */
+    /* Selectbox */
     [data-testid="stSidebar"] [data-baseweb="select"] span {
         color:#111827 !important;
         font-weight:700;
     }
-
-    /* Input text */
     [data-testid="stSidebar"] [data-baseweb="select"] input {
         color:#111827 !important;
     }
-
-    /* Select container */
     [data-testid="stSidebar"] [data-baseweb="select"] > div {
         background:#ffffff !important;
         border:2px solid #cbd5e1 !important;
         border-radius:10px !important;
     }
-
-    /* Dropdown options */
     [data-baseweb="menu"] * {
         color:#111827 !important;
     }
 
-    /* ---------- FORCE REFRESH BUTTON (Human-eye contrast safe) ---------- */
-
-    /* Normal state */
+    /* Force Refresh button */
     [data-testid="stSidebar"] .stButton > button,
     [data-testid="stSidebar"] .stButton > button * {
         background:#ffffff !important;
-        color:#1f2920 !important;        /* strong dark text */
+        color:#1f2920 !important;
         font-weight:700 !important;
         border:none !important;
         border-radius:9px !important;
         box-shadow:none !important;
         opacity:0.9 !important;
-        filter:none !important;
     }
-
-    /* Hover */
-    [data-testid="stSidebar"] .stButton > button:hover:not(:disabled),
-    [data-testid="stSidebar"] .stButton > button:hover:not(:disabled) * {
+    [data-testid="stSidebar"] .stButton > button:hover:not(:disabled) {
         background:#f1f5f9 !important;
         color:#0f172a !important;
-        opacity:0.5 !important
-        border-color:#020617 !important;
         transform:translateY(-0.5px);
     }
-
-    /* Disabled / cooldown — readable but subtle */
-    [data-testid="stSidebar"] .stButton > button:disabled,
-    [data-testid="stSidebar"] .stButton > button:disabled * {
+    [data-testid="stSidebar"] .stButton > button:disabled {
         background:#f3f4f6 !important;
-        color:#475569 !important;        /* visible muted gray */
+        color:#475569 !important;
         border:1px solid #d1d5db !important;
-        
-        opacity:0.75 !important;            /* remove washout */
-        filter:none !important;
+        opacity:0.75 !important;
     }
 
-    /* ---------- INFO BOX ---------- */
+    /* Info box light */
     .info-box {
         background:#f7f9ff;
         border-left:4px solid #667eea;
@@ -203,13 +205,6 @@ st.markdown("""
         border:1px solid #1f2937;
     }
 
-    h1 {
-        background: linear-gradient(135deg,#9aa8ff,#c6a5ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight:900;
-    }
-
     h2,h3 { color:#e5e7eb; }
 
     .card {
@@ -227,23 +222,32 @@ st.markdown("""
         color:#f1f5f9 !important;
     }
 
-    /* Selectbox (dark mode readable) */
+    /* Select */
     [data-testid="stSidebar"] [data-baseweb="select"] span,
     [data-testid="stSidebar"] [data-baseweb="select"] input {
         color:#f8fafc !important;
         font-weight:600;
     }
-
     [data-baseweb="menu"] * {
         color:#f8fafc !important;
     }
 
+    /* Info box dark */
     .info-box {
         background:rgba(118,75,162,.15);
         border-left:4px solid #9f7aea;
         color:#e5e7eb;
     }
+
+    /* Page title dark gradient */
+    .page-title {
+        background: linear-gradient(135deg,#9aa8ff,#c6a5ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color:#c6a5ff;
+    }
 }
+
 
 /* Charts transparent */
 .js-plotly-plot,
@@ -251,9 +255,78 @@ st.markdown("""
     background:transparent !important;
 }
 
+/* HEADER BANNER */
+.dashboard-header {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Title */
+.dashboard-title {
+    text-align: left;
+    font-size: 2.6rem;
+    font-weight: 900;
+    margin-bottom: 0.6rem;
+
+    background: linear-gradient(135deg,#5b6fe6,#764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    color:#5b6fe6; /* fallback */
+}
+
+/* Info Box */
+.dashboard-info {
+    background: #f4f6ff;
+    border-left: 4px solid #667eea;
+    border-radius: 14px;
+
+    padding: 12px 16px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Strong text */
+.dashboard-info strong {
+    font-size: 1.05rem;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+
+  .dashboard-info {
+      background: rgba(118,75,162,.18);
+      border-left: 4px solid #9f7aea;
+      color: #e5e7eb;
+  }
+
+  .dashboard-title {
+      background: linear-gradient(135deg,#9aa8ff,#c6a5ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: #c6a5ff;
+  }
+}
+            
 </style>
 """, unsafe_allow_html=True)
 
+# ---------------- HEADER (Banner Style) ----------------
+st.markdown(
+    """
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">
+            🚦 India Real-Time Traffic Dashboard
+        </h1>
+        <div class="dashboard-info">
+            <strong>📡 Live Traffic Intelligence</strong><br/>
+            Real-time traffic monitoring across major Indian cities powered by TomTom Traffic API.<br/>
+            Data updates every 5 minutes to optimize API usage.
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 
 # ---------------- CITY COORDINATES ----------------
 city_coords = {
