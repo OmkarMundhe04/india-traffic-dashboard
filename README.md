@@ -36,3 +36,6 @@ levels, and provides interactive analytics, insights, and heat-map overlays.
 ---
 
 ## 🚀 Run the Project Locally
+## 🔗 Live Demo
+
+https://india-traffic-dashboard.streamlit.app/
