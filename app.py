@@ -275,11 +275,20 @@ city_coords = {
 
 # ---------------- DATA FETCH ----------------
 @st.cache_data(ttl=REFRESH_INTERVAL_SEC, show_spinner=False)
+@st.cache_data(ttl=REFRESH_INTERVAL_SEC, show_spinner=False)
 def fetch_traffic_data():
-    return get_congestion_for_cities(city_coords, TOMTOM_KEY, MAPMYINDIA_KEY)
+    hotspots, api_working, api_source = get_congestion_for_cities(
+        city_coords, TOMTOM_KEY, MAPMYINDIA_KEY
+    )
+
+    # TRUE DATA FETCH TIME
+    last_updated = datetime.now()
+
+    return hotspots, api_working, api_source, last_updated
 
 with st.spinner('🔄 Fetching live traffic data from TomTom...'):
-    hotspots, api_working, api_source = fetch_traffic_data()
+    hotspots, api_working, api_source, last_updated = fetch_traffic_data()
+
 
 # ---------------- SIDEBAR ----------------
 with st.sidebar:
@@ -322,7 +331,9 @@ with st.sidebar:
         st.cache_data.clear()
         st.rerun()
     
-    st.caption(f"Last updated: {datetime.now().strftime('%H:%M:%S')}")
+    st.caption(
+    f"Last updated: {last_updated.strftime('%H:%M:%S')}"
+)
     
     st.markdown("---")
     
@@ -442,7 +453,7 @@ for spot in hotspots:
         popup_html += f"<p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> {spot['current_speed']} km/h</p>"
         popup_html += f"<p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> {spot['free_flow_speed']} km/h</p>"
     
-    popup_html += f"<p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> {datetime.now().strftime('%H:%M')}</p>"
+    popup_html += f"<p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> {last_updated.strftime('%H:%M')}</p>"
     popup_html += "</div>"
 
     CircleMarker(
