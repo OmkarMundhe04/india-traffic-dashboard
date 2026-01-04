@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ced6b596cec89ea57b18610200ec02f7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ced6b596cec89ea57b18610200ec02f7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ced6b596cec89ea57b18610200ec02f7 = L.map(
+                "map_ced6b596cec89ea57b18610200ec02f7",
+                {
+                    center: [19.076, 72.8777],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_ced6b596cec89ea57b18610200ec02f7);
+
+            
+
+        
+    
+            var tile_layer_1e82dbae47574f4096117b13bba40d03 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1e82dbae47574f4096117b13bba40d03.addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var circle_marker_a3b831120333ced03aab3dbefd914ba0 = L.circleMarker(
+                [19.076, 72.8777],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_5085e6fd78afbd809248ff7f4e3a6f79 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_eef30b3362bfc94abcd79a60d32bf7a9 = $(`<div id="html_eef30b3362bfc94abcd79a60d32bf7a9" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Mumbai</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 20 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 20 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_5085e6fd78afbd809248ff7f4e3a6f79.setContent(html_eef30b3362bfc94abcd79a60d32bf7a9);
+            
+        
+
+        circle_marker_a3b831120333ced03aab3dbefd914ba0.bindPopup(popup_5085e6fd78afbd809248ff7f4e3a6f79)
+        ;
+
+        
+    
+    
+            var marker_7e2bd5824b3a7936b986ffd2ff0f26ef = L.marker(
+                [19.076, 72.8777],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_641a79d4c1ab3904af22a8f6be9b575a = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Mumbai: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_7e2bd5824b3a7936b986ffd2ff0f26ef.setIcon(div_icon_641a79d4c1ab3904af22a8f6be9b575a);
+            
+    
+            var circle_marker_7728e4579509065a99cb44f6d2f871d8 = L.circleMarker(
+                [18.407, 76.5604],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_7317b486491e089dea766d290bc96cf4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_ee995570aa84adfdadb693f9dbb666b7 = $(`<div id="html_ee995570aa84adfdadb693f9dbb666b7" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Latur</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 19 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 19 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_7317b486491e089dea766d290bc96cf4.setContent(html_ee995570aa84adfdadb693f9dbb666b7);
+            
+        
+
+        circle_marker_7728e4579509065a99cb44f6d2f871d8.bindPopup(popup_7317b486491e089dea766d290bc96cf4)
+        ;
+
+        
+    
+    
+            var marker_87b066749487085de3381122800626c5 = L.marker(
+                [18.407, 76.5604],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_0bc42a1c848ff46c2c0a4aaf7edcabd9 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Latur: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_87b066749487085de3381122800626c5.setIcon(div_icon_0bc42a1c848ff46c2c0a4aaf7edcabd9);
+            
+    
+            var circle_marker_96db4574064effa492228f979b1a77fa = L.circleMarker(
+                [18.5204, 73.8567],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_65165ae8448f14a447905a4f84a39372 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6e4cb8903d6386158c79b5c2074130fa = $(`<div id="html_6e4cb8903d6386158c79b5c2074130fa" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Pune</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 15 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 15 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_65165ae8448f14a447905a4f84a39372.setContent(html_6e4cb8903d6386158c79b5c2074130fa);
+            
+        
+
+        circle_marker_96db4574064effa492228f979b1a77fa.bindPopup(popup_65165ae8448f14a447905a4f84a39372)
+        ;
+
+        
+    
+    
+            var marker_e4f1e02c7570f36a75b867d9bcc6acf9 = L.marker(
+                [18.5204, 73.8567],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_5fb2598c9f0a57605cb0c8102c2021fa = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Pune: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_e4f1e02c7570f36a75b867d9bcc6acf9.setIcon(div_icon_5fb2598c9f0a57605cb0c8102c2021fa);
+            
+    
+            var circle_marker_944c8ed385dc5e506975a52c8ddffcb6 = L.circleMarker(
+                [16.705, 74.2433],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_8ba172c514437274fcd99e6bdda2d544 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_2e8841bc8400ebc9264e5a026a2d15f2 = $(`<div id="html_2e8841bc8400ebc9264e5a026a2d15f2" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Kolhapur</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 20.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 20 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 25 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_8ba172c514437274fcd99e6bdda2d544.setContent(html_2e8841bc8400ebc9264e5a026a2d15f2);
+            
+        
+
+        circle_marker_944c8ed385dc5e506975a52c8ddffcb6.bindPopup(popup_8ba172c514437274fcd99e6bdda2d544)
+        ;
+
+        
+    
+    
+            var marker_1712d7a3654cb436c4957ff7ae432b58 = L.marker(
+                [16.705, 74.2433],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_1bc746500aaa160cdcfc6c61dde79fdc = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Kolhapur: 20.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_1712d7a3654cb436c4957ff7ae432b58.setIcon(div_icon_1bc746500aaa160cdcfc6c61dde79fdc);
+            
+    
+            var circle_marker_9bc25055a206b3cf8a1f51e616ef1971 = L.circleMarker(
+                [28.6139, 77.209],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_b28d3a361ca21fc88739c06f2a758a69 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_6215eb050238993b85a27aae28ef2c1e = $(`<div id="html_6215eb050238993b85a27aae28ef2c1e" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Delhi</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 25 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 25 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_b28d3a361ca21fc88739c06f2a758a69.setContent(html_6215eb050238993b85a27aae28ef2c1e);
+            
+        
+
+        circle_marker_9bc25055a206b3cf8a1f51e616ef1971.bindPopup(popup_b28d3a361ca21fc88739c06f2a758a69)
+        ;
+
+        
+    
+    
+            var marker_f781bda3de8523b1cb9a62cf669ffaee = L.marker(
+                [28.6139, 77.209],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_b591c14fe26598c4f1bd6e189f4c6c09 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Delhi: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_f781bda3de8523b1cb9a62cf669ffaee.setIcon(div_icon_b591c14fe26598c4f1bd6e189f4c6c09);
+            
+    
+            var circle_marker_5c12637f4f9e59d22342f2057b2953f2 = L.circleMarker(
+                [26.8467, 80.9462],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_cd7d0f7cbe11cb86f0e659d900868310 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8b76a464e06d611335e04bd49274afa6 = $(`<div id="html_8b76a464e06d611335e04bd49274afa6" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Lucknow</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 30 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 30 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_cd7d0f7cbe11cb86f0e659d900868310.setContent(html_8b76a464e06d611335e04bd49274afa6);
+            
+        
+
+        circle_marker_5c12637f4f9e59d22342f2057b2953f2.bindPopup(popup_cd7d0f7cbe11cb86f0e659d900868310)
+        ;
+
+        
+    
+    
+            var marker_b1779e9ae03572bfe19380e522af6f45 = L.marker(
+                [26.8467, 80.9462],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_c93ebaf0433fca201620d85b48ed8333 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Lucknow: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_b1779e9ae03572bfe19380e522af6f45.setIcon(div_icon_c93ebaf0433fca201620d85b48ed8333);
+            
+    
+            var circle_marker_fcec2bb5d6c9c8187b3c0fe4c0acc0b0 = L.circleMarker(
+                [26.9124, 75.7873],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_6e77d27732fc4e84814b95a339848996 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_831d681ea5040bc7751808661d958834 = $(`<div id="html_831d681ea5040bc7751808661d958834" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Jaipur</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 52 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 52 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_6e77d27732fc4e84814b95a339848996.setContent(html_831d681ea5040bc7751808661d958834);
+            
+        
+
+        circle_marker_fcec2bb5d6c9c8187b3c0fe4c0acc0b0.bindPopup(popup_6e77d27732fc4e84814b95a339848996)
+        ;
+
+        
+    
+    
+            var marker_c2079347ed906e74233ee32f171f5f1b = L.marker(
+                [26.9124, 75.7873],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_0a5079b7157d838d3324051129fa937d = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Jaipur: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_c2079347ed906e74233ee32f171f5f1b.setIcon(div_icon_0a5079b7157d838d3324051129fa937d);
+            
+    
+            var circle_marker_6d6babdbe6ab8bc1564057c2c61c4423 = L.circleMarker(
+                [23.0225, 72.5714],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_e9297231e1bd40d2c60a75cd32839796 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_772a88fbd8308ee9d6bfb70ddb0a1a5c = $(`<div id="html_772a88fbd8308ee9d6bfb70ddb0a1a5c" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Ahmedabad</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 14.3%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 24 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 28 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_e9297231e1bd40d2c60a75cd32839796.setContent(html_772a88fbd8308ee9d6bfb70ddb0a1a5c);
+            
+        
+
+        circle_marker_6d6babdbe6ab8bc1564057c2c61c4423.bindPopup(popup_e9297231e1bd40d2c60a75cd32839796)
+        ;
+
+        
+    
+    
+            var marker_206203a5a058d3f1e7e782dd4036a1d1 = L.marker(
+                [23.0225, 72.5714],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_7b0e229fb7a133819a6a92b6dc06ce2d = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Ahmedabad: 14.3%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_206203a5a058d3f1e7e782dd4036a1d1.setIcon(div_icon_7b0e229fb7a133819a6a92b6dc06ce2d);
+            
+    
+            var circle_marker_4d61d1166d8325449d4a560deda6f533 = L.circleMarker(
+                [12.9716, 77.5946],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_5430849a236cec9526d07f2d14d6d59d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_cf9d9ae922ab495fd112009f94cce466 = $(`<div id="html_cf9d9ae922ab495fd112009f94cce466" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Bengaluru</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 26 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 26 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_5430849a236cec9526d07f2d14d6d59d.setContent(html_cf9d9ae922ab495fd112009f94cce466);
+            
+        
+
+        circle_marker_4d61d1166d8325449d4a560deda6f533.bindPopup(popup_5430849a236cec9526d07f2d14d6d59d)
+        ;
+
+        
+    
+    
+            var marker_e20563437e4a0a3d9e3dae00708dfbaf = L.marker(
+                [12.9716, 77.5946],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_db4f274d5bbd10e8d9582886d574c8c1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Bengaluru: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_e20563437e4a0a3d9e3dae00708dfbaf.setIcon(div_icon_db4f274d5bbd10e8d9582886d574c8c1);
+            
+    
+            var circle_marker_a2897bb79adf527bc1a8cab118a800db = L.circleMarker(
+                [13.0827, 80.2707],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_333d4eb636c529136786fccbf782023f = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_340b65f8d0c6ed13b0557d0666bdb427 = $(`<div id="html_340b65f8d0c6ed13b0557d0666bdb427" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Chennai</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 12.5%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 21 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 24 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_333d4eb636c529136786fccbf782023f.setContent(html_340b65f8d0c6ed13b0557d0666bdb427);
+            
+        
+
+        circle_marker_a2897bb79adf527bc1a8cab118a800db.bindPopup(popup_333d4eb636c529136786fccbf782023f)
+        ;
+
+        
+    
+    
+            var marker_d297aa7623b3314c0109c01d2f0be44b = L.marker(
+                [13.0827, 80.2707],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_89117988b52a17502e5a5431ebd883ea = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Chennai: 12.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_d297aa7623b3314c0109c01d2f0be44b.setIcon(div_icon_89117988b52a17502e5a5431ebd883ea);
+            
+    
+            var circle_marker_8f2f463caff459080a9b5d4a705e549a = L.circleMarker(
+                [17.385, 78.4867],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_1a10c44546b81000f7dc01caf3044b1d = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_4e0acac93028302867bcbbdfd08d53d4 = $(`<div id="html_4e0acac93028302867bcbbdfd08d53d4" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Hyderabad</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 0.0%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 27 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 27 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_1a10c44546b81000f7dc01caf3044b1d.setContent(html_4e0acac93028302867bcbbdfd08d53d4);
+            
+        
+
+        circle_marker_8f2f463caff459080a9b5d4a705e549a.bindPopup(popup_1a10c44546b81000f7dc01caf3044b1d)
+        ;
+
+        
+    
+    
+            var marker_093c1fd845310e44d82239954966a244 = L.marker(
+                [17.385, 78.4867],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_eee0a51aeb2c8437f66ef18e1f01a3b6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Hyderabad: 0.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_093c1fd845310e44d82239954966a244.setIcon(div_icon_eee0a51aeb2c8437f66ef18e1f01a3b6);
+            
+    
+            var circle_marker_f71a3870cb74572894ab75493ea753f4 = L.circleMarker(
+                [22.5726, 88.3639],
+                {"bubblingMouseEvents": true, "color": "#48bb78", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#48bb78", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 2}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+        var popup_473f6c1e5c441f22918f35b511f51ce6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5f3ae7e1b540ccf41f0813e8cb1e0eee = $(`<div id="html_5f3ae7e1b540ccf41f0813e8cb1e0eee" style="width: 100.0%; height: 100.0%;">     <div style='font-family: Arial; padding: 12px; min-width: 200px;'>         <h4 style='margin: 0 0 10px 0; color: #2d3748;'>Kolkata</h4>         <p style='margin: 5px 0;'><strong>🚦 Congestion:</strong> 13.6%</p>         <p style='margin: 5px 0;'><strong>📊 Source:</strong> TomTom Traffic API</p>     <p style='margin: 5px 0;'><strong>🚗 Current Speed:</strong> 19 km/h</p><p style='margin: 5px 0;'><strong>⚡ Free Flow:</strong> 22 km/h</p><p style='margin: 5px 0; font-size: 0.85em; color: #718096;'><strong>⏰ Updated:</strong> 11:33</p></div></div>`)[0];
+                popup_473f6c1e5c441f22918f35b511f51ce6.setContent(html_5f3ae7e1b540ccf41f0813e8cb1e0eee);
+            
+        
+
+        circle_marker_f71a3870cb74572894ab75493ea753f4.bindPopup(popup_473f6c1e5c441f22918f35b511f51ce6)
+        ;
+
+        
+    
+    
+            var marker_ea087ca067fe61b3b4b65d07d72e9fdb = L.marker(
+                [22.5726, 88.3639],
+                {
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var div_icon_8a373dac6c0aa77f0c33f670dce26d4b = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 700;\n                color: #2d3748;\n                background: white;\n                padding: 6px 12px;\n                border-radius: 12px;\n                border: 2px solid #48bb78;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Kolkata: 13.6%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_ea087ca067fe61b3b4b65d07d72e9fdb.setIcon(div_icon_8a373dac6c0aa77f0c33f670dce26d4b);
+            
+    
+            var heat_map_1f99f5e56d1d0ca25bb8d37b65f746af = L.heatLayer(
+                [[19.076, 72.8777, 0.0], [18.407, 76.5604, 0.0], [18.5204, 73.8567, 0.0], [16.705, 74.2433, 0.2], [28.6139, 77.209, 0.0], [26.8467, 80.9462, 0.0], [26.9124, 75.7873, 0.0], [23.0225, 72.5714, 0.14300000000000002], [12.9716, 77.5946, 0.0], [13.0827, 80.2707, 0.125], [17.385, 78.4867, 0.0], [22.5726, 88.3639, 0.136]],
+                {
+  "minOpacity": 0.4,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 18,
+}
+            );
+        
+    
+            heat_map_1f99f5e56d1d0ca25bb8d37b65f746af.addTo(map_ced6b596cec89ea57b18610200ec02f7);
+        
+    
+            var layer_control_c41ca8bfd86479c2370cf070e48d1411_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_1e82dbae47574f4096117b13bba40d03,
+                },
+                overlays :  {
+                    "Traffic Heatmap" : heat_map_1f99f5e56d1d0ca25bb8d37b65f746af,
+                },
+            };
+            let layer_control_c41ca8bfd86479c2370cf070e48d1411 = L.control.layers(
+                layer_control_c41ca8bfd86479c2370cf070e48d1411_layers.base_layers,
+                layer_control_c41ca8bfd86479c2370cf070e48d1411_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_ced6b596cec89ea57b18610200ec02f7);
+
+        
+</script>
+</html>

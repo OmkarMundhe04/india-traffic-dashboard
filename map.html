@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8644547438de0faa27beab443f171c87 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8644547438de0faa27beab443f171c87" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8644547438de0faa27beab443f171c87 = L.map(
+                "map_8644547438de0faa27beab443f171c87",
+                {
+                    center: [19.076, 72.8777],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b09e7ba082cda56830336d198806373e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b09e7ba082cda56830336d198806373e.addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var tile_layer_0edb912e5d247e1680f0b68168e7b254 = L.tileLayer(
+                "https://apis.mapmyindia.com/advancedmaps/v1/mtsynbfageotfudxcyvuubuzjmnrpmykkizz/traffic/256/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "MapmyIndia",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0edb912e5d247e1680f0b68168e7b254.addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var circle_marker_93fa1afcef64f6c313d49abbba1eaa88 = L.circleMarker(
+                [19.076, 72.8777],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.52, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_cc012965867fa3d07a5a4e1d21651175 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bc08e37a384e235f62d78b57aab35e21 = $(`<div id="html_bc08e37a384e235f62d78b57aab35e21" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Mumbai</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 85.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_cc012965867fa3d07a5a4e1d21651175.setContent(html_bc08e37a384e235f62d78b57aab35e21);
+            
+        
+
+        circle_marker_93fa1afcef64f6c313d49abbba1eaa88.bindPopup(popup_cc012965867fa3d07a5a4e1d21651175)
+        ;
+
+        
+    
+    
+            var marker_25cf4dc2a7e630daa04297ffc8887813 = L.marker(
+                [19.076, 72.8777],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_efaa161fd135e31c140bee5e1feb2ec1 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Mumbai: 85.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_25cf4dc2a7e630daa04297ffc8887813.setIcon(div_icon_efaa161fd135e31c140bee5e1feb2ec1);
+            
+    
+            var circle_marker_304b2363b645da200aa4cc620cd7cd53 = L.circleMarker(
+                [28.6139, 77.209],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 22.919999999999998, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_bc8477541946e87d85f1e5e445e672e3 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_bcf9324793ad6cbf9d0b6c5d75be0f93 = $(`<div id="html_bcf9324793ad6cbf9d0b6c5d75be0f93" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Delhi</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 70.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_bc8477541946e87d85f1e5e445e672e3.setContent(html_bcf9324793ad6cbf9d0b6c5d75be0f93);
+            
+        
+
+        circle_marker_304b2363b645da200aa4cc620cd7cd53.bindPopup(popup_bc8477541946e87d85f1e5e445e672e3)
+        ;
+
+        
+    
+    
+            var marker_7dc29038b0f56995847ea9dc755f2811 = L.marker(
+                [28.6139, 77.209],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_7f07afc449646457511cea5c68a4f57e = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Delhi: 70.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_7dc29038b0f56995847ea9dc755f2811.setIcon(div_icon_7f07afc449646457511cea5c68a4f57e);
+            
+    
+            var circle_marker_d9d70b0080cb904fda07714c06fdb92e = L.circleMarker(
+                [12.9716, 77.5946],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.64, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_c4413438fdc0b1d830265ac9f03be538 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_a46e37170dec8ae53d330ab52a1ed9eb = $(`<div id="html_a46e37170dec8ae53d330ab52a1ed9eb" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Bengaluru</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 73.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_c4413438fdc0b1d830265ac9f03be538.setContent(html_a46e37170dec8ae53d330ab52a1ed9eb);
+            
+        
+
+        circle_marker_d9d70b0080cb904fda07714c06fdb92e.bindPopup(popup_c4413438fdc0b1d830265ac9f03be538)
+        ;
+
+        
+    
+    
+            var marker_170fccf9664408100d180bcb9217a326 = L.marker(
+                [12.9716, 77.5946],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_8a3bf09ca4d403ebb99c3fa88d1873be = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Bengaluru: 73.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_170fccf9664408100d180bcb9217a326.setIcon(div_icon_8a3bf09ca4d403ebb99c3fa88d1873be);
+            
+    
+            var circle_marker_9e9b7144a7f042a5c2b64f37204e1fa6 = L.circleMarker(
+                [13.0827, 80.2707],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 23.64, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_d0a82298293dcb819e29ec5ac4e48c73 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_c6336fc77c5872bce53729aab614314d = $(`<div id="html_c6336fc77c5872bce53729aab614314d" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Chennai</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 73.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_d0a82298293dcb819e29ec5ac4e48c73.setContent(html_c6336fc77c5872bce53729aab614314d);
+            
+        
+
+        circle_marker_9e9b7144a7f042a5c2b64f37204e1fa6.bindPopup(popup_d0a82298293dcb819e29ec5ac4e48c73)
+        ;
+
+        
+    
+    
+            var marker_ffcbb5537969574068dd742e86ff3c20 = L.marker(
+                [13.0827, 80.2707],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_c3f700b3e11907a31316be73d4eb2d05 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Chennai: 73.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_ffcbb5537969574068dd742e86ff3c20.setIcon(div_icon_c3f700b3e11907a31316be73d4eb2d05);
+            
+    
+            var circle_marker_7081714554d6352495a09282eaa0d589 = L.circleMarker(
+                [18.5204, 73.8567],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.0, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_049683efb48486deb52f38185089f462 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_4fa7260d079286c1d395135401e0cc8f = $(`<div id="html_4fa7260d079286c1d395135401e0cc8f" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Pune</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 37.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_049683efb48486deb52f38185089f462.setContent(html_4fa7260d079286c1d395135401e0cc8f);
+            
+        
+
+        circle_marker_7081714554d6352495a09282eaa0d589.bindPopup(popup_049683efb48486deb52f38185089f462)
+        ;
+
+        
+    
+    
+            var marker_e5804a9e4e1cb515d721900187d104aa = L.marker(
+                [18.5204, 73.8567],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_ab01e7eeabf1758a92c1a2e51ec277f5 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #2ecc71;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Pune: 37.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_e5804a9e4e1cb515d721900187d104aa.setIcon(div_icon_ab01e7eeabf1758a92c1a2e51ec277f5);
+            
+    
+            var circle_marker_8176d810daeb7838c68ffe980a2d7fdd = L.circleMarker(
+                [17.385, 78.4867],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 15.36, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_a1197fef548fe6c635080e94462cb67f = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0087ff36afc6b1c5249b8ddc67e0a209 = $(`<div id="html_0087ff36afc6b1c5249b8ddc67e0a209" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Hyderabad</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 39.0%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_a1197fef548fe6c635080e94462cb67f.setContent(html_0087ff36afc6b1c5249b8ddc67e0a209);
+            
+        
+
+        circle_marker_8176d810daeb7838c68ffe980a2d7fdd.bindPopup(popup_a1197fef548fe6c635080e94462cb67f)
+        ;
+
+        
+    
+    
+            var marker_3789c37e37aeee645389810baeb1f077 = L.marker(
+                [17.385, 78.4867],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_234c6fd6240b071e07c405b498246159 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #2ecc71;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Hyderabad: 39.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_3789c37e37aeee645389810baeb1f077.setIcon(div_icon_234c6fd6240b071e07c405b498246159);
+            
+    
+            var circle_marker_db6507e38dbc28a52259a35de6d6e0cd = L.circleMarker(
+                [22.5726, 88.3639],
+                {"bubblingMouseEvents": true, "color": "#2ecc71", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2ecc71", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 14.64, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_834dcb207709b254a8aad495c360075d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0a04e0bf13467e42cd70df99c836b3e6 = $(`<div id="html_0a04e0bf13467e42cd70df99c836b3e6" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Kolkata</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 36.0%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_834dcb207709b254a8aad495c360075d.setContent(html_0a04e0bf13467e42cd70df99c836b3e6);
+            
+        
+
+        circle_marker_db6507e38dbc28a52259a35de6d6e0cd.bindPopup(popup_834dcb207709b254a8aad495c360075d)
+        ;
+
+        
+    
+    
+            var marker_ae9aee96c67b2c77ba3d4f900a74ce35 = L.marker(
+                [22.5726, 88.3639],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_40cb6cb6e7eb5155ee266afb80a59c90 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #2ecc71;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Kolkata: 36.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_ae9aee96c67b2c77ba3d4f900a74ce35.setIcon(div_icon_40cb6cb6e7eb5155ee266afb80a59c90);
+            
+    
+            var circle_marker_d4826d5efb2149ab359b72e0f60c667c = L.circleMarker(
+                [23.0225, 72.5714],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 24.0, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_b7b4fbefda40c85bd8d731d74af6f12d = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_7e10af8ee63f8bcc1f2d44c989cf5685 = $(`<div id="html_7e10af8ee63f8bcc1f2d44c989cf5685" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Ahmedabad</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 75.0%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_b7b4fbefda40c85bd8d731d74af6f12d.setContent(html_7e10af8ee63f8bcc1f2d44c989cf5685);
+            
+        
+
+        circle_marker_d4826d5efb2149ab359b72e0f60c667c.bindPopup(popup_b7b4fbefda40c85bd8d731d74af6f12d)
+        ;
+
+        
+    
+    
+            var marker_ce31f931c1b108db9d2452b856160f8f = L.marker(
+                [23.0225, 72.5714],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_63b6c0b9f4067b54f6324450a31c74c6 = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Ahmedabad: 75.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_ce31f931c1b108db9d2452b856160f8f.setIcon(div_icon_63b6c0b9f4067b54f6324450a31c74c6);
+            
+    
+            var circle_marker_0a5d4b17f966fc6db89d2d6be08f3c11 = L.circleMarker(
+                [26.9124, 75.7873],
+                {"bubblingMouseEvents": true, "color": "#f1c40f", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#f1c40f", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 16.08, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_852c0538f8810ff11fe1e4e6596358f7 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_9907572bbdb0a903882c1713ee60d0be = $(`<div id="html_9907572bbdb0a903882c1713ee60d0be" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Jaipur</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 42.0%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_852c0538f8810ff11fe1e4e6596358f7.setContent(html_9907572bbdb0a903882c1713ee60d0be);
+            
+        
+
+        circle_marker_0a5d4b17f966fc6db89d2d6be08f3c11.bindPopup(popup_852c0538f8810ff11fe1e4e6596358f7)
+        ;
+
+        
+    
+    
+            var marker_7ef4936b8ac4eb78b618bd9d50a195d7 = L.marker(
+                [26.9124, 75.7873],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_ebcc2a5cd549411f5c9af6a8cd7f96db = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #f1c40f;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Jaipur: 42.0%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_7ef4936b8ac4eb78b618bd9d50a195d7.setIcon(div_icon_ebcc2a5cd549411f5c9af6a8cd7f96db);
+            
+    
+            var circle_marker_1bb43a567cefd311e82ddd010e703285 = L.circleMarker(
+                [26.8467, 80.9462],
+                {"bubblingMouseEvents": true, "color": "#e74c3c", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#e74c3c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 26.52, "stroke": true, "weight": 3}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+        var popup_30aaa79bdca06afe566a4608f559f0f0 = L.popup({
+  "maxWidth": 250,
+});
+
+        
+            
+                var html_0dfcfd1552a211fe37eb01920b7c05ec = $(`<div id="html_0dfcfd1552a211fe37eb01920b7c05ec" style="width: 100.0%; height: 100.0%;"><div style='font-family: Arial; padding: 10px;'><h4 style='margin: 0 0 10px 0;'>Lucknow</h4><p style='margin: 5px 0;'><strong>Congestion:</strong> 85.5%</p><p style='margin: 5px 0;'><strong>Source:</strong> Simulated (Prediction Model)</p></div></div>`)[0];
+                popup_30aaa79bdca06afe566a4608f559f0f0.setContent(html_0dfcfd1552a211fe37eb01920b7c05ec);
+            
+        
+
+        circle_marker_1bb43a567cefd311e82ddd010e703285.bindPopup(popup_30aaa79bdca06afe566a4608f559f0f0)
+        ;
+
+        
+    
+    
+            var marker_9abe88cd56fff01f1ddfc42d5c40ba7a = L.marker(
+                [26.8467, 80.9462],
+                {
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var div_icon_0812412c650d1d500c7310da6a4d431c = L.divIcon({
+  "html": "\n            \u003cdiv style=\"\n                font-size: 11px;\n                font-weight: 600;\n                color: #2d3748;\n                background: white;\n                padding: 4px 8px;\n                border-radius: 12px;\n                border: 2px solid #e74c3c;\n                box-shadow: 0 2px 8px rgba(0,0,0,0.2);\n                white-space: nowrap;\n            \"\u003e\n                Lucknow: 85.5%\n            \u003c/div\u003e\n            ",
+  "className": "empty",
+});
+        
+    
+                marker_9abe88cd56fff01f1ddfc42d5c40ba7a.setIcon(div_icon_0812412c650d1d500c7310da6a4d431c);
+            
+    
+            var heat_map_0274d1ac6049f0d321c0b2a3921caa7a = L.heatLayer(
+                [[19.076, 72.8777, 0.855], [28.6139, 77.209, 0.705], [12.9716, 77.5946, 0.735], [13.0827, 80.2707, 0.735], [18.5204, 73.8567, 0.375], [17.385, 78.4867, 0.39], [22.5726, 88.3639, 0.36], [23.0225, 72.5714, 0.75], [26.9124, 75.7873, 0.42], [26.8467, 80.9462, 0.855]],
+                {
+  "minOpacity": 0.4,
+  "maxZoom": 18,
+  "radius": 25,
+  "blur": 18,
+}
+            );
+        
+    
+            heat_map_0274d1ac6049f0d321c0b2a3921caa7a.addTo(map_8644547438de0faa27beab443f171c87);
+        
+    
+            var layer_control_1121b53ffa062135cdf5a6bca3d9161c_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_b09e7ba082cda56830336d198806373e,
+                },
+                overlays :  {
+                    "MapmyIndia Live Traffic" : tile_layer_0edb912e5d247e1680f0b68168e7b254,
+                    "macro_element_0274d1ac6049f0d321c0b2a3921caa7a" : heat_map_0274d1ac6049f0d321c0b2a3921caa7a,
+                },
+            };
+            let layer_control_1121b53ffa062135cdf5a6bca3d9161c = L.control.layers(
+                layer_control_1121b53ffa062135cdf5a6bca3d9161c_layers.base_layers,
+                layer_control_1121b53ffa062135cdf5a6bca3d9161c_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_8644547438de0faa27beab443f171c87);
+
+        
+</script>
+</html>
